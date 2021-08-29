@@ -1,0 +1,15 @@
+li a {
+    color: #fff;
+    transition: all .3s;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+li a:hover {
+    color: #ff6b81;
+}
+
+.Selected {
+    color: #ff6b81;
+}

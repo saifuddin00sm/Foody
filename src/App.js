@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Layout from "./containers/Layout/Layout";
+import MainComponent from "./containers/MainComponent/MainComponent";
+import About from "./components/Contents/About/About";
+import Blogs from "./components/Contents/Blogs/Blogs";
+import DishDetails from "./components/Contents/Dishes/DishDetails/DishDetails";
+
+const StyledApp = styled.div`
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-family: "Josefin Sans", sans-serif;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <StyledApp className="App">
+        <Layout>
+          <Switch>
+            <Route path="/" exact={true} component={MainComponent} />
+            <Route path="/about" component={About} />
+            <Route path="/blogs" component={Blogs} />
+            <Route path="/:id" component={DishDetails} />
+          </Switch>
+        </Layout>
+      </StyledApp>
+    </BrowserRouter>
   );
 }
 
