@@ -18,6 +18,7 @@ const ShowOverlay = styled.div`
   color: #fff;
   font-size: 1.3rem;
   font-weight: 500;
+  border-radius: 4px;
   &:hover {
     opacity: 1;
   }

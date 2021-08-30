@@ -15,7 +15,7 @@ const StyledApp = styled.div`
 function App() {
   return (
     <BrowserRouter>
-      <StyledApp className="App">
+      <StyledApp>
         <Layout>
           <Switch>
             <Route path="/" exact={true} component={MainComponent} />

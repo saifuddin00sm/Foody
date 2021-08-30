@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { Card, CardImg, CardBody, CardTitle } from "reactstrap";
 import { withRouter } from "react-router-dom";
 import Spinner from "../../UI/Spinner/Spinner";
-import TopDishes from "./TopDishes/TopDishes";
+// import TopDishes from "./TopDishes/TopDishes";
 import Overlay from "../../UI/Overlay/Overlay";
 import FilterBtns from "./FilterBtns/FilterBtns";
 
@@ -66,7 +66,7 @@ const Dishes = props => {
           onClick={() => detailsHandler(dish.idMeal)}
           key={dish.idMeal}
         >
-          <Overlay>View details</Overlay>
+          <Overlay>View item details</Overlay>
           <Card key={dish.idMeal}>
             <CardImg
               top
@@ -106,10 +106,6 @@ const Dishes = props => {
         <FilterBtns cateBtn={cate} />
         <div className="row">{allDish}</div>
         <Hr />
-        <div>
-          <h3 className="mb-3">Checkout our Categories</h3>
-          <TopDishes />
-        </div>
       </div>
     </>
   );

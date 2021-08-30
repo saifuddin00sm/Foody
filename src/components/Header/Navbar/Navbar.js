@@ -20,7 +20,7 @@ const Navbar = props => {
         Home
       </NavItems>
       <NavItems link="/about">About</NavItems>
-      <NavItems link="blogs">Blogs</NavItems>
+      <NavItems link="/blogs">Blogs</NavItems>
     </Navigation>
   );
 };
