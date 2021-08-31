@@ -1,0 +1,20 @@
+.FilterBtn {
+    padding: 5px 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.FilterBtn:hover {
+    background-color: #ff6b81;
+    color: #fff;
+}
+
+.active {
+    background-color: #ff6b81;
+    color: #fff;
+}

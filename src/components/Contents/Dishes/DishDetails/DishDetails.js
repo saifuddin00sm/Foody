@@ -74,8 +74,8 @@ class DishDetails extends Component {
             <p>{elements.strInstructions}</p>
             <h6 className="fw-bold">Ingredients :</h6>
             <ul>
-              {ingredients.map(ing => (
-                <li key={ing}>{ing}</li>
+              {ingredients.map((ing, index) => (
+                <li key={index}>{ing}</li>
               ))}
             </ul>
           </div>

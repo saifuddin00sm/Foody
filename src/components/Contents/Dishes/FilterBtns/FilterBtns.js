@@ -1,47 +1,43 @@
-import React from "react";
-import styled from "styled-components";
-
-const Button = styled.button`
-  padding: 5px 25px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-weight: 500;
-  font-size: 1rem;
-  outline: none;
-  background-color: #fff;
-  transition: all 0.3s;
-  &:hover {
-    background-color: #ff6b81;
-    color: #fff;
-  }
-`;
+import React, { useState } from "react";
+import "./FilterBtn.css";
 
 const FilterBtns = props => {
+  const [btnState, setBtnState] = useState({
+    activeBtn: null,
+    btns: [
+      { id: 1, btnText: "Italian" },
+      { id: 2, btnText: "Canadian" },
+      { id: 3, btnText: "Indian" },
+      { id: 4, btnText: "American" },
+      { id: 5, btnText: "Chinese" },
+      { id: 6, btnText: "Turkish" },
+      { id: 7, btnText: "French" },
+    ],
+  });
+
+  const filterBtn = (val, index) => {
+    setBtnState({ ...btnState, activeBtn: btnState.btns[index] });
+    props.cateBtn(val);
+  };
+
+  const toggleActiveBtn = index => {
+    if (btnState.btns[index] === btnState.activeBtn) {
+      return "active";
+    }
+  };
+
   return (
     <div className="text-center my-4">
       <p>Filter by country</p>
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("Italian")}>
-        Italian
-      </Button>
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("Canadian")}>
-        Canadian
-      </Button>
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("Indian")}>
-        Indian
-      </Button>
-
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("American")}>
-        American
-      </Button>
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("Chinese")}>
-        Chinese
-      </Button>
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("Turkish")}>
-        Turkish
-      </Button>
-      <Button className="me-2 mb-2" onClick={() => props.cateBtn("French")}>
-        French
-      </Button>
+      {btnState.btns.map((btn, index) => (
+        <button
+          key={btn.id}
+          className={`${toggleActiveBtn(index)} me-2 mb-2 FilterBtn`}
+          onClick={() => filterBtn(btn.btnText, index)}
+        >
+          {btn.btnText}
+        </button>
+      ))}
     </div>
   );
 };
