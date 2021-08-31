@@ -9,8 +9,8 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: black;
-  color: #fff;
+  background-color: #1c2444;
+  color: #f2f3fb;
 
   @media (max-width: 768px) {
     nav {
@@ -19,18 +19,16 @@ const StyledHeader = styled.div`
   }
 `;
 
-const Header = props => {
-  return (
-    <header>
-      <StyledHeader>
-        <Humburger openSideDrawer={props.openSideDrawer} />
-        <Logo />
-        <nav>
-          <Navbar />
-        </nav>
-      </StyledHeader>
-    </header>
-  );
-};
+const Header = props => (
+  <header>
+    <StyledHeader>
+      <Humburger openSideDrawer={props.openSideDrawer} />
+      <Logo />
+      <nav>
+        <Navbar />
+      </nav>
+    </StyledHeader>
+  </header>
+);
 
 export default Header;

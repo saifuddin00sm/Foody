@@ -5,6 +5,8 @@ import MainComponent from "./containers/MainComponent/MainComponent";
 import About from "./components/Contents/About/About";
 import Blogs from "./components/Contents/Blogs/Blogs";
 import DishDetails from "./components/Contents/Dishes/DishDetails/DishDetails";
+import fontAwesome from "./components/UI/icons/fontAwesome";
+fontAwesome();
 
 const StyledApp = styled.div`
   overflow: hidden;

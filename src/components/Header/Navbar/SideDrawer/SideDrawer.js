@@ -36,18 +36,16 @@ const SideDraw = styled.div`
   }
 `;
 
-const SideDrawer = props => {
-  return (
-    <>
-      <SideDraw condition={props.open}>
-        <Logo />
-        <nav>
-          <Navbar />
-        </nav>
-      </SideDraw>
-      <BackDrop show={props.open} clicked={props.closeSideDrawer} />
-    </>
-  );
-};
+const SideDrawer = props => (
+  <>
+    <SideDraw condition={props.open} onClick={props.closeSideDrawer}>
+      <Logo />
+      <nav>
+        <Navbar />
+      </nav>
+    </SideDraw>
+    <BackDrop show={props.open} clicked={props.closeSideDrawer} />
+  </>
+);
 
 export default SideDrawer;
