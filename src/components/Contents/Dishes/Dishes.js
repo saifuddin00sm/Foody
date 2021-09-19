@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import { getData, getInitialData } from "../../../containers/redux/actionType";
-import SearchBar from "../SearchBar/SearchBar";
 import { Card, CardImg, CardBody, CardTitle } from "reactstrap";
 import { withRouter } from "react-router-dom";
 import Spinner from "../../UI/Spinner/Spinner";
-// import TopDishes from "./TopDishes/TopDishes";
+import SearchBar from "../SearchBar/SearchBar";
+import { getData, getInitialData } from "../../../containers/redux/actionType";
 import Overlay from "../../UI/Overlay/Overlay";
 import FilterBtns from "./FilterBtns/FilterBtns";
 

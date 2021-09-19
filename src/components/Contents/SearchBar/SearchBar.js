@@ -6,6 +6,10 @@ const StyledDiv = styled.div`
   width: 50%;
   margin: 10px auto;
   margin-top: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SearchBar = props => {

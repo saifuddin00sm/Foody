@@ -32,7 +32,7 @@ const FilterBtns = props => {
       {btnState.btns.map((btn, index) => (
         <button
           key={btn.id}
-          className={`${toggleActiveBtn(index)} me-2 mb-2 FilterBtn`}
+          className={`${toggleActiveBtn(index)} me-3 mb-2 FilterBtn`}
           onClick={() => filterBtn(btn.btnText, index)}
         >
           {btn.btnText}
